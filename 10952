@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+  freopen("input.txt", "r", stdin);
+
+  int a = 1;
+  int b = 1;
+
+  while(a != 0 && b != 0){
+    scanf("%d %d", &a, &b); 
+    printf("%d\n", a + b);
+  }
+  return 0;
+}
