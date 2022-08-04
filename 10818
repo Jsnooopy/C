@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  freopen("input.txt", "r", stdin);
+
+  int a, big, small;
+  scanf("%d", &a);
+  int S[a];
+
+  for(int i = 0; i < a; i++){
+    scanf("%d", &S[i]);
+    if(i == 0){
+      big = S[i];
+      small = S[i];
+    }
+    else if(big < S[i]){
+      big = S[i];
+    }
+    else{
+      small = S[i];
+    }
+  }
+  printf("%d %d", small, big);
+  return 0;
+  
+}
