@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(){
+  //freopen("input.txt", "r", stdin);
+
+  int a = 1 ,b = 1 ,c = 1;
+  int max, var1, var2;
+  
+  while(1){
+    scanf("%d %d %d", &a, &b, &c);
+    if(a >= b && a>= c){
+      max = a;
+      var1 = b;
+      var2 = c;
+    }
+    else if(b >= c){
+      max = b;
+      var1 = a;
+      var2 = c;
+    }
+    else{
+      max = c;
+      var1 = a;
+      var2 = b;
+    }
+    
+    if(max == 0 && var1 == 0 && var2 == 0){
+      break;
+    }
+    else{
+      if(var1*var1 + var2*var2 == max*max){
+       printf("right\n");
+      }
+      else{
+        printf("wrong\n");
+      }
+    }
+  }
+  return 0;
+}
